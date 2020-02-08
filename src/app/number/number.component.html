@@ -1,0 +1,62 @@
+
+<div class="container">
+
+  <div class="row" >
+    <div class="col-sm-6">
+      <h1>{{countryDetail?.name}}</h1>
+      <img src="{{countryDetail?.flag}}"  class="img-fluid" >
+    </div>
+    <div class="col-sm-6">
+      <br>
+      <br>
+      <h3>Native Name: {{countryDetail?.nativeName}}</h3>
+
+      <h3>Capital: {{countryDetail?.capital}}</h3>
+
+      <h3>Population: {{countryDetail?.population}}</h3>
+      <h3>Area: {{countryDetail?.area}}km2</h3>
+
+      <h3>country code: +{{countryDetail?.callingCodes}}</h3>
+      <h3>Region: {{countryDetail?.region}}</h3>
+      <h3>Sub Region: {{countryDetail?.subregion}}</h3>
+
+      <h3>Languages: {{countryDetail?.languages[0]?.name}}</h3>
+
+
+
+
+    </div>
+  </div>
+  <br>
+<!--  <div class="container2" >-->
+<!--      <h2>Neighbour Countries</h2>-->
+<!--      <div class="row2" *ngFor="let item of br">-->
+<!--        <div class="col-sm-3" *nf >-->
+<!--          <img src="{{item?.flag}}"  class="img-fluid" >-->
+<!--        </div>-->
+<!--      </div>-->
+
+<!--  </div>-->
+<!--  <div class="container2">-->
+<!--  <div *ngFor="let item of br; let i = index">-->
+<!--    <div *ngIf="i % 3 == 0" class="row">-->
+<!--      <img src="{{item?.flag}}"  class="img-fluid" >-->
+<!--      -->
+
+<!--    </div>-->
+<!--  </div>-->
+<!--  </div>-->
+  <div class="card">
+    <div class="card-body">
+      <h1>Neighbour Countries</h1>
+      <br>
+      <br>
+      <div class="row">
+
+        <div class="col-sm-4" *ngFor="let item of br" style="margin-bottom: 2em;">
+          <img src="{{item?.flag}}"  class="img-fluid"   >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

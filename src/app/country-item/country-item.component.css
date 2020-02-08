@@ -1,0 +1,17 @@
+.country-item {
+  border: 1px solid #dedede;
+  padding: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.country-item p {
+  margin-bottom: 0.2em;
+  font-size: 0.9em;
+
+}
+
+.country-item h2 {
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-bottom: 0.5em;
+}
