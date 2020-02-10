@@ -25,6 +25,7 @@ export class NumberComponent implements OnInit {
 
 
   br = [];
+  lan = [];
 
 
   ngOnInit() {
@@ -41,6 +42,7 @@ export class NumberComponent implements OnInit {
         if (this.post[i].alpha3Code === countryCode) {
           console.log(this.post[i]);
           this.countryDetail = this.post[i];
+          this.lan = this.countryDetail.languages;
         }
       }
       this.bod = this.countryDetail.borders;
@@ -60,6 +62,16 @@ export class NumberComponent implements OnInit {
 
 
     });
+  }
+  manipulateTime(timezone) {
+    const timez = timezone.replace('UTC','').replace(':','.');
+    const intTimeZone = parseInt(timez.toString());
+    const d = new Date();
+    const localTime = d.getTime();
+    const localOffset = d.getTimezoneOffset() * 60000;
+    const utc = localTime + localOffset;
+    const newCalTime = utc + (3600000 * intTimeZone);
+    return new Date(newCalTime).toLocaleTimeString();
   }
 
 }
