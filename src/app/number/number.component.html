@@ -11,17 +11,17 @@
       <br>
       <h3>Native Name: {{countryDetail?.nativeName}}</h3>
 
-      <h3>Capital: {{countryDetail?.capital}}</h3>
+      <h4>Capital: {{countryDetail?.capital}}</h4>
 
-      <h3>Population: {{countryDetail?.population}}</h3>
-      <h3>Area: {{countryDetail?.area}} km2</h3>
+      <h4>Population: {{countryDetail?.population}}</h4>
+      <h4>Area: {{countryDetail?.area}} km2</h4>
 
-      <h3>country code: +{{countryDetail?.callingCodes}}</h3>
-      <h3>Region: {{countryDetail?.region}}</h3>
-      <h3>Sub Region: {{countryDetail?.subregion}}</h3>
+      <h4>country code: +{{countryDetail?.callingCodes}}</h4>
+      <h4>Region: {{countryDetail?.region}}</h4>
+      <h4>Sub Region: {{countryDetail?.subregion}}</h4>
 
-      <h3 *ngFor="let item1 of lan">Languages: {{item1?.name}}</h3>
-      <h3 *ngFor="let time of countryDetail?.timezones">Times: {{manipulateTime(time)}}</h3>
+      <h4 *ngFor="let item1 of lan">Languages: {{item1?.name}}</h4>
+      <h4 *ngFor="let time of countryDetail?.timezones">Times: {{manipulateTime(time)}}</h4>
 
 
 

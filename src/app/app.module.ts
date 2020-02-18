@@ -11,6 +11,8 @@ import { CountryItemComponent } from './country-item/country-item.component';
 import {FormsModule} from '@angular/forms';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import { NgxSpinnerModule } from "ngx-spinner";
+import { ServiceWorkerModule } from "@angular/service-worker";
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,8 @@ import { NgxSpinnerModule } from "ngx-spinner";
     RouterModule,
     FormsModule,
     HttpClientModule,
-    NgxSpinnerModule
+    NgxSpinnerModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
 
   ],
   providers: [],
